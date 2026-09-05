@@ -1,0 +1,61 @@
+{
+  "name": "atarist1-web",
+  "version": "0.6.1",
+  "description": "NeoST WebAssembly Emulator - Atari ST/STE/Mega emulation in your browser",
+  "type": "module",
+  "main": "src/main.jsx",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "build:wasm": "bash ./scripts/build-wasm.sh",
+    "build:wasm:debug": "bash ./scripts/build-wasm.sh debug",
+    "build:wasm:clean": "rm -rf build-wasm && mkdir build-wasm",
+    "build:all": "npm run build:wasm && npm run build",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "lint": "eslint src --ext js,jsx",
+    "format": "prettier --write \"src/**/*.{js,jsx,css}\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "vite": "^4.3.9",
+    "vitest": "^0.32.0",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/jest-dom": "^6.0.0",
+    "eslint": "^8.44.0",
+    "eslint-plugin-react": "^7.32.2",
+    "prettier": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "keywords": [
+    "atari",
+    "st",
+    "ste",
+    "emulator",
+    "wasm",
+    "webassembly",
+    "react",
+    "68000",
+    "retro",
+    "vintage"
+  ],
+  "author": "ajfarrell75",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ajfarrell75/atarist1-web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ajfarrell75/atarist1-web/issues"
+  },
+  "homepage": "https://github.com/ajfarrell75/atarist1-web#readme"
+}
